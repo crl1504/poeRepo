@@ -14,10 +14,8 @@
 
 task main()
 {
-	setServo(servoMotor, 127);
-	untilLight(2900, lineFollower);
-	setServo(servoMotor, -127);
-	wait(2);
-
-
+	untilBump(bumpSwitch);
+	startMotor(rightMotor, 63);
+	wait(5);
+	stopMotor(rightMotor);
 }
